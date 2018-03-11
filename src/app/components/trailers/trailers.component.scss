@@ -1,0 +1,12 @@
+.trailers {
+  display:flex;
+  overflow-x: scroll;
+  background-color:#19213F;
+  padding:50px 0;
+  
+}
+.trailer {
+  flex-basis:25%;
+  color:white;
+  // padding: 0 15px;
+}
