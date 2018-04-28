@@ -1,14 +1,15 @@
-  <a [routerLink]="['/trailer', trailer.id]" class="trailer-link">
-    <img src="https://image.tmdb.org/t/p/w500/{{trailer.poster_path}}">
-    <div class="trailer-overlay">
-      <div class="trailer-overlay-box">
-        <div class="trailer-title">
-          {{ trailer.title }}
-        </div>
+<a [routerLink]="['/trailer', trailer.id]" class="trailer-link">
+<div class="trailer-img" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w500/' + trailer.poster_path + ')'}"></div>
+<!-- <img src="https://image.tmdb.org/t/p/w500/{{trailer.poster_path}}"> -->
+<div class="trailer-overlay">
+    <div class="trailer-overlay-box">
+      <div class="trailer-title">
+        {{ trailer.title }}
+      </div>
 
-        <div class="trailer-description">
-          {{ trailer.overview }}
-        </div>
+      <div class="trailer-description">
+        {{ trailer.overview }}
       </div>
     </div>
-  </a>
+  </div>
+</a>

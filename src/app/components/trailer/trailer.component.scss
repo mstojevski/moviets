@@ -4,6 +4,8 @@ img:hover {
 }
 .trailer-link {
   position: relative;
+  width: 500px;
+  height:calc(100vh - 120px);
   display:block;
 }
 
@@ -17,7 +19,7 @@ img:hover {
   right: 0;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: #19213f;
+  background-color: rgba(0, 0, 0, 0.78);
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -26,10 +28,17 @@ img:hover {
 .trailer-link:hover .trailer-overlay {
   opacity: 1;
 }
+.trailer-link:hover .trailer-overlay .trailer-overlay-box {
+  opacity:1;
+  transform: translateY(0);
+}
 
 .trailer-overlay-box {
   padding-left:25px;
   padding-right:25px;
+  transform:translateY(-20px);
+  opacity:0;
+  transition: all 500ms;
 }
 .trailer-title {
   margin-bottom:15px;
@@ -39,4 +48,10 @@ img:hover {
 .trailer-description {
   color:white;
   line-height:145%;
+}
+.trailer-img {
+  height:100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center center;
 }
