@@ -1,12 +1,18 @@
 .trailers {
-  display:flex;
+  display: flex;
   overflow-x: scroll;
-  background-color:#19213F;
-  padding:50px 0;
-  
+  background-color: #19213f;
+  // padding: 50px 0;
+  overflow-y:hidden;
 }
-.trailer {
-  flex-basis:25%;
-  color:white;
-  // padding: 0 15px;
+
+@media screen and (max-width: 768px) {
+  .trailer {
+    flex-basis: 0;
+  }
+  .trailers {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }

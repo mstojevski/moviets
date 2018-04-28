@@ -10,6 +10,9 @@
    License: none (public domain)
 */
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -75,30 +78,30 @@ table {
   flex: 1;
 }
 
-h2 {
-  color:green;
-  font-weight:400;
-}
 p {
   line-height:145%;
 }
 body {
   font-family: 'Exo', sans-serif;
-
-
 }
+
 /*
- # Colors
+  # Styling Scroll bar
 */
-// body::-webkit-scrollbar {
-//   width: 1em;
-// }
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track:horizontal {
+  background-color: #090d1b;
+}
 
-// body::-webkit-scrollbar-track {
-//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-// }
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+  background: #5bb9ab; 
+}
 
-// body::-webkit-scrollbar-thumb {
-// background-color: darkgrey;
-// outline: 1px solid slategrey;
-// }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover:horizontal {
+  background: #5bb9ab; 
+}

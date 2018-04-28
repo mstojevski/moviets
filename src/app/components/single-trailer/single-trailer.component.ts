@@ -12,7 +12,7 @@ import { SafePipe } from '../../safe.pipe';
   styleUrls: ['./single-trailer.component.scss'],
 })
 export class SingleTrailerComponent implements OnInit {
- 
+  youtubePrefix = 'https://www.youtube.com/embed/';
   trailer$: Observable<Trailer>;
   constructor(
     private ts: TrailersService,
@@ -21,7 +21,7 @@ export class SingleTrailerComponent implements OnInit {
   ) {}
 
   getMovie(id: number) {
-    return this.ts.getMovie(id);
+    return this.ts.getTrailer(id);
   }
   ngOnInit() {
     const id = +this.activeRoute.snapshot.paramMap.get('id');

@@ -13,6 +13,6 @@ export class TrailersComponent implements OnInit {
   constructor(private ts: TrailersService) {}
 
   ngOnInit() {
-    this.trailers$ = this.ts.getMovies();
+    this.trailers$ = this.ts.getPopularTrailers();
   }
 }

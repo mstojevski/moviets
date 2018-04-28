@@ -1,9 +1,14 @@
-  <a [routerLink]="['/trailer', trailer.id]">
+  <a [routerLink]="['/trailer', trailer.id]" class="trailer-link">
     <img src="https://image.tmdb.org/t/p/w500/{{trailer.poster_path}}">
+    <div class="trailer-overlay">
+      <div class="trailer-overlay-box">
+        <div class="trailer-title">
+          {{ trailer.title }}
+        </div>
+
+        <div class="trailer-description">
+          {{ trailer.overview }}
+        </div>
+      </div>
+    </div>
   </a>
-  <!-- <h2 class="trailer-title">
-    {{ trailer.title }}
-  </h2>
-  <p class="trailer-overview">
-    {{ trailer.overview }}
-  </p> -->

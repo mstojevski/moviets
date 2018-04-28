@@ -1,12 +1,10 @@
 <div *ngIf="(trailer$ | async) as trailer">
   <div class="single-trailer">
-    <img src="https://image.tmdb.org/t/p/w300/{{trailer.poster_path}}" alt="">
-    {{ trailer.title}}
-    {{ trailer.description }}
-    
-    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{trailer.videos.results[0].key}}"></iframe> -->
+    <img src="https://image.tmdb.org/t/p/w300/{{trailer.poster_path}}">
+    <div class="desc">
+      <h1>{{ trailer.title}} </h1>
+      <p>{{ trailer.overview}} </p>
+      <iframe width="560" height="315" [src]="(youtubePrefix + trailer.videos.results[0].key) | safe"></iframe>
+    </div> 
   </div>
-  <!-- <pre>{{ trailer | json }}</pre> -->
-  {{ trailer.videos.results[0].key}}
 </div>
-<!-- link https://www.youtube.com/embed/ -->

@@ -5,4 +5,5 @@ export interface Trailer {
   poster_path: string;
   overview: string;
   title: string;
+  genre_ids: number[];
 }

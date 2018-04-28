@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -15,7 +14,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TrailersService } from './services/trailers.service';
 import { CreditsComponent } from './credits/credits.component';
 import { SafePipe } from './safe.pipe';
-
+import { DiscoverComponent } from './discover/discover.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,17 @@ import { SafePipe } from './safe.pipe';
     SingleTrailerComponent,
     PageNotFoundComponent,
     CreditsComponent,
-    SafePipe
+    SafePipe,
+    DiscoverComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [TrailersService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
