@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { Trailer } from '../models/trailer';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinct';
 
 // const API_KEY = '3bf2d43612aaa8e0a5a9302e6a0e9021';
 const API_URL =
@@ -26,8 +28,20 @@ export class TrailersService {
     return this.http.get(url).map((data: any) => data as Trailer);
   }
   getTrailers(): Observable<Trailer[]> {
-    return this.http.get(
-      'https://api.themoviedb.org/3/discover/movie?page=1&api_key=3bf2d43612aaa8e0a5a9302e6a0e9021'
-    ).map((data: any) => data as Trailer[]);
+    return this.http
+      .get(
+        'https://api.themoviedb.org/3/discover/movie?page=1&api_key=3bf2d43612aaa8e0a5a9302e6a0e9021'
+      )
+      .map((data: any) => data as Trailer[]);
+  }
+
+  getSearchedMovies(searchTerm): Observable<Trailer[]> {
+    return this.http
+      .get(
+        `https://api.themoviedb.org/3/search/movie?api_key=3bf2d43612aaa8e0a5a9302e6a0e9021&language=en-US&query=${searchTerm}`
+      )
+      .map((data: any) => data.results as Trailer[])
+      .debounceTime(500)
+      .distinct();
   }
 }

@@ -149,6 +149,11 @@ table {
 * #Sticky Foooter
 */
 
+.page-wrap, html, body {
+  height:100%;
+  margin:0;
+}
+
 .page-wrap {
   display: flex;
   min-height: 100vh;
@@ -186,4 +191,12 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #5bb9ab;
+}
+.discover-header {
+  padding:30px 50px;
+  background-color:#222d58;
+  span {
+    color:white;
+    margin-right:10px;
+  }
 }

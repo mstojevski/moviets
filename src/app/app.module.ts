@@ -17,6 +17,8 @@ import { SafePipe } from './safe.pipe';
 import { DiscoverComponent } from './discover/discover.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { MatSelectModule } from '@angular/material/select';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule
   ],
   providers: [TrailersService],
   bootstrap: [AppComponent],

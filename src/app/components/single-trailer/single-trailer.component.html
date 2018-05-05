@@ -1,10 +1,33 @@
-<div *ngIf="(trailer$ | async) as trailer">
-  <div class="single-trailer">
-    <img src="https://image.tmdb.org/t/p/w300/{{trailer.poster_path}}">
-    <div class="desc">
-      <h1>{{ trailer.title}} </h1>
-      <p>{{ trailer.overview}} </p>
-      <iframe width="560" height="315" [src]="(youtubePrefix + trailer.videos.results[0].key) | safe"></iframe>
-    </div> 
+<div *ngIf="(trailer$ | async) as trailer" class="single-trailer-container">
+
+  <div class="single-trailer-poster" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w500/' + trailer.poster_path + ')'}"></div>
+
+
+  <div class="single-trailer-desc">
+    <h1 class="st-title">{{ trailer.title}} </h1>
+    <p class="st-overview">{{ trailer.overview}} </p>
+    <iframe width="560" height="315" [src]="(youtubePrefix + trailer.videos.results[0].key) | safe"></iframe>
+    <!-- <pre>{{ trailer | json }}</pre> -->
+    <div class="st-info">
+      <p>
+        <span>Genre</span>: {{trailer.genres[0].name}}</p>
+      <p>
+        <span>Release Date</span>: {{trailer.release_date | date }}
+        <p>
+          <p>
+            <span>Vote</span> {{ trailer.vote_average}}</p>
+            <p> <span>Voted</span> {{ trailer.vote_count}}</p>
+
+          <h2 class="st-title">Geek Info</h2>
+          <p>
+            <span>Budget</span> {{trailer.budget}}</p>
+          <p>
+            <span>Popularity</span> {{trailer.popularity}}</p>
+          <p>
+            <span>Imdb_id</span> {{trailer.imdb_id}} </p>
+          <!-- <p> {{trailer.company[0].title}} </p> -->
+    </div>
+
   </div>
+
 </div>
