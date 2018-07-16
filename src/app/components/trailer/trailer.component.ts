@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Trailer } from '../../models/trailer';
-import { SafePipe } from '../../safe.pipe';
+import { SafePipe } from '../../pipes/safe.pipe';
 
 @Component({
   selector: 'mt-trailer',

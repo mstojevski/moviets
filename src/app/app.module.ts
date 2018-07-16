@@ -1,23 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-
-import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { TrailersComponent } from './components/trailers/trailers.component';
-import { TrailerComponent } from './components/trailer/trailer.component';
-import { SingleTrailerComponent } from './components/single-trailer/single-trailer.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { TrailersService } from './services/trailers.service';
-import { CreditsComponent } from './credits/credits.component';
-import { SafePipe } from './safe.pipe';
-import { DiscoverComponent } from './discover/discover.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSelectModule } from '@angular/material/select';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CreditsComponent } from './components/credits/credits.component';
+import { DiscoverComponent } from './components/discover/discover.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavComponent } from './components/nav/nav.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SingleTrailerComponent } from './components/single-trailer/single-trailer.component';
+import { TrailerComponent } from './components/trailer/trailer.component';
+import { TrailersComponent } from './components/trailers/trailers.component';
+import { SafePipe } from './pipes/safe.pipe';
+import { TrailersService } from './services/trailers.service';
+
 
 
 @NgModule({

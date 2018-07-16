@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Trailer } from '../../models/trailer';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-import { SafePipe } from '../../safe.pipe';
+import { SafePipe } from '../../pipes/safe.pipe';
 
 @Component({
   selector: 'mt-single-trailer',
